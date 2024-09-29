@@ -1,10 +1,9 @@
-package BDD;
+package BDD_example;
 
 import io.cucumber.java.en.*;
 import io.restassured.RestAssured;
 import models.pet.Pet;
 import models.pet.Status;
-import org.junit.jupiter.api.Assertions;
 import service.PetService;
 import utils.DataGenerator;
 import java.io.File;
