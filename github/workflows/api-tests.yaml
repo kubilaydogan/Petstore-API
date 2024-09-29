@@ -1,13 +1,17 @@
 name: Run Cucumber and PetStore Tests
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+#  push:
+#    branches:
+#      - main
+#  pull_request:
+#    branches:
+#      - main
   workflow_dispatch: {}
+
+concurrency:
+  group: "run-api-tests-${{ github.ref }}"
+  cancel-in-progress: true
 
 jobs:
   build:
