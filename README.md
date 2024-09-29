@@ -119,7 +119,6 @@ Pet pet = Pet.builder()                // Starts the building process | Starts b
 * It is common practice to keep service classes under the service folder.
 ```
 service
-├── ....java
 └── PetService.java
 ```
 
