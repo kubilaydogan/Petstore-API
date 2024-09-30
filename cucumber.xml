@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="8.892" tests="5" skipped="0" failures="0" errors="0">
-<testcase classname="PetStore API Tests" name="Create a new pet" time="3.784">
+<testsuite name="Cucumber" time="3.212" tests="5" skipped="0" failures="0" errors="0">
+<testcase classname="PetStore API Tests" name="Create a new pet" time="2.292">
 <system-out><![CDATA[
 Given the PetStore API is available.........................................passed
 And a pet is created........................................................passed
@@ -10,7 +10,7 @@ Then the response status code should be 200.................................pass
 * the response body field "name" should be the pet's name...................passed
 ]]></system-out>
 </testcase>
-<testcase classname="PetStore API Tests" name="Get pet by ID" time="1.177">
+<testcase classname="PetStore API Tests" name="Get pet by ID" time="0.217">
 <system-out><![CDATA[
 Given the PetStore API is available.........................................passed
 And a pet is created........................................................passed
@@ -18,7 +18,7 @@ When I get the pet by ID....................................................pass
 Then the response status code should be 200.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="PetStore API Tests" name="Delete a pet" time="1.165">
+<testcase classname="PetStore API Tests" name="Delete a pet" time="0.172">
 <system-out><![CDATA[
 Given the PetStore API is available.........................................passed
 And a pet is created........................................................passed
@@ -26,7 +26,7 @@ When I delete the pet.......................................................pass
 Then the response status code should be 200.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="PetStore API Tests" name="Update pet name and status" time="1.178">
+<testcase classname="PetStore API Tests" name="Update pet name and status" time="0.159">
 <system-out><![CDATA[
 Given the PetStore API is available.........................................passed
 And a pet is created........................................................passed
@@ -34,7 +34,7 @@ When I update the pet's name to "luna" and status to "sold".................pass
 Then the response status code should be 200.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="PetStore API Tests" name="Upload pet image" time="1.443">
+<testcase classname="PetStore API Tests" name="Upload pet image" time="0.233">
 <system-out><![CDATA[
 Given the PetStore API is available.........................................passed
 And a pet is created........................................................passed
