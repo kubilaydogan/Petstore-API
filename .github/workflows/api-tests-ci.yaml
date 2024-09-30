@@ -36,3 +36,28 @@ jobs:
 
       - name: Run PetStoreTest
         run: mvn test -Dtest=tests.PetStoreTest
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./cucumber-reports
+
+      - name: Post GitHub Pages link
+        if: success()
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const repo = context.repo.repo;
+            const owner = context.repo.owner;
+            const runId = context.runId;
+            const url = `https://${owner}.github.io/${repo}/report.html`;
+            const comment = `The HTML report is available [here](${url}).`;
+            await github.issues.createComment({
+              owner,
+              repo,
+              issue_number: context.issue.number,
+              body: comment
+            });
