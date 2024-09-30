@@ -77,13 +77,6 @@
 
     <build>
         <plugins>
-            <!-- mvn test-compile-->
-            <!-- This command is useful when you want to ensure that your test code is free of compilation errors before running the tests-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version>
-            </plugin>
             <!--  Cucumber Reporting -->
             <plugin>
                 <!-- Run `mvn verify` and cucumber reports will be generated in target/cucumber-html-reports-->
