@@ -50,12 +50,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const { context } = require('@actions/github');
-            const github = require('@actions/github');
-            const repo = context.repo.repo;
-            const owner = context.repo.owner;
-            const issue_number = context.payload.pull_request ? context.payload.pull_request.number : context.runId;
-            const url = `https://github.com/${owner}/${repo}/blob/gh-pages/cucumber.xml`;
+            const url = `https://kubilaydogan.github.io/Petstore-API/cucumber.xml`;
             const comment = `The XML report is available [here](${url}).`;
             await github.issues.createComment({
               owner,
