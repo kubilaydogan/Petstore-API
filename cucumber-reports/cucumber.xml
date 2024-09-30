@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="6.196" tests="5" skipped="0" failures="0" errors="0">
+<testcase classname="PetStore API Tests" name="Create a new pet" time="2.302">
+<system-out><![CDATA[
+Given the PetStore API is available.........................................passed
+And a pet is created........................................................passed
+Then the response status code should be 200.................................passed
+* the response header "Content-Type" should be "application/json"...........passed
+* the response time should be less than 2000 milliseconds...................passed
+* the response body field "name" should be the pet's name...................passed
+]]></system-out>
+</testcase>
+<testcase classname="PetStore API Tests" name="Get pet by ID" time="0.9">
+<system-out><![CDATA[
+Given the PetStore API is available.........................................passed
+And a pet is created........................................................passed
+When I get the pet by ID....................................................passed
+Then the response status code should be 200.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="PetStore API Tests" name="Delete a pet" time="0.896">
+<system-out><![CDATA[
+Given the PetStore API is available.........................................passed
+And a pet is created........................................................passed
+When I delete the pet.......................................................passed
+Then the response status code should be 200.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="PetStore API Tests" name="Update pet name and status" time="0.919">
+<system-out><![CDATA[
+Given the PetStore API is available.........................................passed
+And a pet is created........................................................passed
+When I update the pet's name to "luna" and status to "sold".................passed
+Then the response status code should be 200.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="PetStore API Tests" name="Upload pet image" time="1.117">
+<system-out><![CDATA[
+Given the PetStore API is available.........................................passed
+And a pet is created........................................................passed
+When I upload an image for the pet..........................................passed
+Then the response status code should be 200.................................passed
+]]></system-out>
+</testcase>
+</testsuite>
