@@ -1,9 +1,20 @@
 # [Petstore Sample API](https://petstoresampleapi.apimatic.dev/v/1_0_5#/http/how-to-get-started)
 
+## Running Tests
+
+- Run [PetStoreTest](src/test/java/tests/PetStoreTest.java)
+```shell
+mvn test -Dtest=tests.PetStoreTest
+```
+
+- Run [Cucumber test](src/test/java/BDD_example/Runner.java)
+```shell
+mvn test -Dtest=BDD_example.Runner
+```
 
 ## About the Structure
 
-### MODELS FOLDER
+### `MODELS FOLDER`
 * Contains classes that represent the data structures used.
 * It is common practice to keep POJO files under the models folder.
 ```
@@ -114,7 +125,7 @@ Pet pet = Pet.builder()                // Starts the building process | Starts b
               .build();                // Completes the building process | Completes building a Pet object
 ``` 
 
-### SERVICE FOLDER
+### `SERVICE FOLDER`
 * Contains classes that interact with the API endpoints.
 * It is common practice to keep service classes under the service folder.
 ```
