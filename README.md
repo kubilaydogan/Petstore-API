@@ -1,9 +1,9 @@
 # [Petstore Sample API](https://petstoresampleapi.apimatic.dev/v/1_0_5#/http/how-to-get-started)
 
 
+## About the Structure
 
-
-## MODELS FOLDER
+### MODELS FOLDER
 * Contains classes that represent the data structures used.
 * It is common practice to keep POJO files under the models folder.
 ```
@@ -35,13 +35,13 @@ public class Tag {
 
 The annotations used in the `Tag` class are from the **Lombok** and **Jackson** libraries.
 
-### Lombok Annotations:
+#### Lombok Annotations:
 1. **`@Builder`**: Generates a builder pattern for the class, allowing for more readable and maintainable object creation.
 2. **`@Data`**: A convenient shortcut annotation that bundles the features of `@ToString`, `@EqualsAndHashCode`, `@Getter`/`@Setter`, and `@RequiredArgsConstructor` together. It generates all the boilerplate code that is normally associated with simple POJOs.
 3. **`@NoArgsConstructor`**: Generates a no-argument constructor.
 4. **`@AllArgsConstructor`**: Generates a constructor with one parameter for each field in the class.
 
-### Jackson Annotations:
+#### Jackson Annotations:
 1. **`@JsonProperty`**: Used to specify the JSON property name for the field. This is useful when the JSON field name does not match the Java field name or when you want to ensure the correct mapping between JSON and Java objects.
 
 
@@ -97,7 +97,7 @@ public class Pet {
 > </dependency>
 
 
-### @Builder
+#### @Builder
 * The `@Builder` annotation is used to generate a builder pattern for the class. 
 * It provides a way to create objects without having to remember the order of the parameters.
 * It also allows you to create objects with only the required fields, making the code more readable and maintainable.
@@ -114,7 +114,7 @@ Pet pet = Pet.builder()                // Starts the building process | Starts b
               .build();                // Completes the building process | Completes building a Pet object
 ``` 
 
-## SERVICE FOLDER
+### SERVICE FOLDER
 * Contains classes that interact with the API endpoints.
 * It is common practice to keep service classes under the service folder.
 ```
