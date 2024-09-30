@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
         features = {"src/test/resources/features"},
         glue = {"BDD_example"},
         plugin = {
-                "html:target/Cucumber-JVM-Reports/cucumber-reports/report.html",
-                "junit:target/Cucumber-JVM-Reports/cucumber-reports/cucumber.xml",
+                "html:Cucumber-JVM-Reports/cucumber-reports/report.html",
+                "junit:Cucumber-JVM-Reports/cucumber-reports/cucumber.xml",
                 "json:target/json-report/cucumber.json",
         },
         monochrome = true,
