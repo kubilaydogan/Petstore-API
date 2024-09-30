@@ -52,9 +52,8 @@ jobs:
           script: |
             const repo = context.repo.repo;
             const owner = context.repo.owner;
-            const runId = context.runId;
-            const url = `https://${owner}.github.io/${repo}/report.html`;
-            const comment = `The HTML report is available [here](${url}).`;
+            const url = `https://github.com/${owner}/${repo}/blob/gh-pages/cucumber.xml`;
+            const comment = `The xml report is available [here](${url}).`;
             await github.issues.createComment({
               owner,
               repo,
