@@ -52,9 +52,3 @@ jobs:
           script: |
             const url = `https://kubilaydogan.github.io/Petstore-API/cucumber.xml`;
             const comment = `The XML report is available [here](${url}).`;
-            await github.issues.createComment({
-              owner,
-              repo,
-              issue_number,
-              body: comment
-            });
