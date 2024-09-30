@@ -42,7 +42,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./cucumber-reports
+          publish_dir: ./cucumber-reports/
 
       - name: Post GitHub Pages link
         if: success()
@@ -50,13 +50,15 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            const { github, context } = require('@actions/github');
             const repo = context.repo.repo;
             const owner = context.repo.owner;
+            const issue_number = context.payload.pull_request ? context.payload.pull_request.number : context.runId;
             const url = `https://github.com/${owner}/${repo}/blob/gh-pages/cucumber.xml`;
-            const comment = `The xml report is available [here](${url}).`;
+            const comment = `The XML report is available [here](${url}).`;
             await github.issues.createComment({
               owner,
               repo,
-              issue_number: context.issue.number,
+              issue_number,
               body: comment
             });
