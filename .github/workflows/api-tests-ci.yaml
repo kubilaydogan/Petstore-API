@@ -50,7 +50,8 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const { github, context } = require('@actions/github');
+            const { context } = require('@actions/github');
+            const github = require('@actions/github');
             const repo = context.repo.repo;
             const owner = context.repo.owner;
             const issue_number = context.payload.pull_request ? context.payload.pull_request.number : context.runId;
