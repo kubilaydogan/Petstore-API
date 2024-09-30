@@ -42,13 +42,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./cucumber-reports/
-
-      - name: Post GitHub Pages link
-        if: success()
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const url = `https://kubilaydogan.github.io/Petstore-API/cucumber.xml`;
-            const comment = `The XML report is available [here](${url}).`;
+          publish_dir: ./cucumber-reports
