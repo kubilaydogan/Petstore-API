@@ -32,7 +32,7 @@ jobs:
         run: mvn clean install
 
       - name: Run Cucumber tests
-        run: mvn test -Dcucumber.options="src/test/resources/features"
+        run: mvn test -Dtest=BDD_example.Runner
 
       - name: Run PetStoreTest
-        run: mvn -Dtest=tests.PetStoreTest test
+        run: mvn test -Dtest=tests.PetStoreTest
