@@ -1,5 +1,27 @@
 # [Petstore Sample API](https://petstoresampleapi.apimatic.dev/v/1_0_5#/http/how-to-get-started)
 
+## About Framework
+
+### **`Features`**
+- **Service Classes**: The `PetService` class contains methods to interact with the API endpoints, encapsulating the request logic and enhancing code readability.
+- **Assertable Response**: The `AssertableResponse` class wraps the response in an `AssertableResponse` object, allowing for further assertions and validations on the response.
+- **Condition Utilities**: The `ConditionUtils` class provides utility methods for common response assertions, such as status code, headers, body fields, and response time.
+- **Pojo Usage**: The framework uses POJO classes to represent user data, ensuring type safety and ease of use.
+- **Lombok and Jackson Annotations**: Utilized Lombok for reducing boilerplate code and Jackson annotations for JSON serialization/deserialization.
+- **Logging**: Logs for HTTP request & response are generated using `RequestLoggingFilter` and `ResponseLoggingFilter`.
+- **Cucumber Report**: Configured Cucumber to generate detailed test reports, providing insights into test execution.
+- **API Utils**: Utilized the `DataGenerator` class to create random `Pet` objects for testing, ensuring diverse and comprehensive test scenarios.
+
+### **`Dependencies`**
+The project uses the following dependencies:
+- **RestAssured**: For testing REST APIs.
+- **JUnit 5**: For running unit tests.
+- **Jackson**: For JSON serialization/deserialization.
+- **Lombok**: For reducing boilerplate code.
+- **Jakarta Validation**: For validating POJO fields.
+- **Cucumber**: For writing and running BDD tests.
+- **JavaFaker**: For generating random data.
+
 ## Running Tests
 
 - Run [PetStoreTest](src/test/java/tests/PetStoreTest.java)
